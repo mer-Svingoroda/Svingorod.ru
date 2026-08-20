@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Svingorod.ru — Федеральный портал Свингорода</title>
+<meta name="description" content="Федеральный портал Свингорода: новости, благоустройство, новые постройки, фотографии и городские события.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap header-row">
+    <a class="brand" href="#home">
+      <img src="assets/logo.png" alt="Логотип Svingorod.ru">
+      <div><b>SVINGOROD<span>.RU</span></b><small>ФЕДЕРАЛЬНЫЙ ПОРТАЛ СВИНГОРОДА</small></div>
+    </a>
+    <div class="search"><input id="searchInput" placeholder="Поиск по сайту…"><button onclick="searchSite()">⌕</button></div>
+    <div class="social"><a href="#" title="Telegram">➤</a><a href="#" title="YouTube">▶</a><a href="#" title="VK">VK</a></div>
+  </div>
+</header>
+
+<nav class="nav">
+ <div class="wrap nav-row">
+  <a class="active" href="#home">⌂ Главная</a>
+  <a href="#news">▤ Новости</a>
+  <a href="#photos">▣ Фотографии</a>
+  <a href="#about">♟ О нас</a>
+  <button onclick="openModal()">✉ Задать свой вопрос</button>
+ </div>
+</nav>
+
+<main id="home">
+<section class="hero wrap">
+  <div class="hero-overlay">
+    <img src="assets/logo.png" alt="" class="hero-logo">
+    <h1>СВИНГОРОД</h1><strong>SVINGOROD.RU</strong>
+    <p>НОВОСТИ · БЛАГОУСТРОЙСТВО · ЛЮДИ · БУДУЩЕЕ</p>
+  </div>
+  <img src="assets/flag-important.jpg" class="hero-flag" alt="Флаг Свингорода">
+  <div class="mayor"><img src="assets/mayor.jpg" alt="Мэр Свингорода"><span>МЭР СВИНГОРОДА</span></div>
+</section>
+
+<div class="ticker"><div class="wrap ticker-in"><b>⚡ СРОЧНО</b><span id="tickerText">Открыта новая дорога между Центральным и Восточным районами</span><i>•</i><span>В Свингороде стартовало строительство школы №4</span><i>•</i><span>Партия «Хрякия» представила новую программу</span></div></div>
+
+<section id="news" class="wrap section">
+ <div class="section-title"><h2>▤ ГЛАВНЫЕ НОВОСТИ</h2><a href="#news">Смотреть все новости →</a></div>
+ <div class="cards">
+  <article class="card"><img src="assets/flag-second.jpg"><label>РАЗВИТИЕ</label><h3>Строительство нового жилого комплекса</h3><p>Центральный район</p><small>12 сентября 2025 · ◉ 15.4K</small></article>
+  <article class="card"><img src="assets/flag-important.jpg"><label>ТРАНСПОРТ</label><h3>Новая дорога связала районы Свингорода</h3><p>Удобство для жителей</p><small>11 сентября 2025 · ◉ 8.2K</small></article>
+  <article class="card"><img src="assets/news-logo.png"><label>БЛАГОУСТРОЙСТВО</label><h3>Обновлён центральный парк</h3><p>Новые зоны отдыха</p><small>11 сентября 2025 · ◉ 6.2K</small></article>
+  <article class="card"><img src="assets/flag-important.jpg"><label>ПОЛИТИКА</label><h3>Партия «Хрякия» — за справедливость!</h3><p>Новая программа развития</p><small>9 сентября 2025 · ◉ 5.1K</small></article>
+ </div>
+</section>
+
+<section class="wrap split">
+ <div class="city-box">
+  <h2>🏙 О СВИНГОРОДЕ</h2>
+  <div class="city-inner">
+   <div><h3>СВИНГОРОД —</h3><p>современный, развивающийся город с большими планами и сильными людьми. Мы строим, улучшаем и делаем наш город лучше для каждого жителя!</p><button onclick="showToast('Раздел «О городе» открыт')">Узнать больше →</button></div>
+  </div>
+ </div>
+ <div class="party">
+  <h2>⚑ ПОДДЕРЖИТЕ ПАРТИЮ!</h2>
+  <div class="party-inner"><div><h3>Хрякия —<br>за справедливость!</h3><p>● Каждому жителю дом!<br>● Справедливость для всех!<br>● Развитие районов!<br>● Сильный и единый город!</p><button onclick="showToast('Спасибо за поддержку!')">Поддержать →</button></div><img src="assets/news-logo.png" alt="СВИН NEWS"></div>
+ </div>
+</section>
+
+<section id="photos" class="wrap section">
+ <div class="section-title"><h2>▣ ФОТОГАЛЕРЕЯ</h2><a href="#photos">Все фотографии →</a></div>
+ <div class="gallery">
+  <img src="assets/flag-important.jpg"><img src="assets/flag-second.jpg"><img src="assets/mayor.jpg"><img src="assets/news-logo.png"><img src="assets/flag-important.jpg">
+ </div>
+</section>
+
+<section class="wrap quote-grid">
+ <div class="quote"><h2>❝ ЦИТАТА ДНЯ</h2><div><img src="assets/mayor.jpg"><p>«Сила нашего города — в его людях. Вместе мы построим будущее, которым будем гордиться!»<br><b>— Мэр Свингорода</b></p></div></div>
+ <div id="about" class="quote"><h2>♟ ГЛАВА ПРЕСС-СЛУЖБЫ</h2><div><img src="assets/press-chief.jpg"><p>«Наш город — наша сила. Мы рассказываем правду, показываем развитие и поддерживаем жителей.»<br><b>— Глава пресс-службы Свингорода</b></p></div></div>
+</section>
+
+<section class="subscribe wrap">
+ <div><h2>БУДЬ В КУРСЕ — С НАМИ!</h2><p>Подпишись на новости Свингорода</p></div>
+ <button onclick="showToast('Вы подписались на новости!')">🔔 Подписаться</button>
+</section>
+</main>
+
+<footer><div class="wrap footer-grid">
+ <div class="footer-brand"><img src="assets/logo.png"><b>SVINGOROD.RU</b><small>ФЕДЕРАЛЬНЫЙ ПОРТАЛ СВИНГОРОДА</small></div>
+ <div><h4>Разделы</h4><a href="#home">Главная</a><a href="#news">Новости</a><a href="#photos">Фотографии</a><a href="#about">О нас</a></div>
+ <div><h4>Связь</h4><a href="#">Telegram</a><a href="#">YouTube</a><a href="#">VK</a></div>
+ <div><h4>Контакты</h4><p>✉ info@svingorod.ru</p><p>⌖ Свингород, Центральный район</p></div>
+</div><div class="copy">© 2026 Svingorod.ru · Все права защищены.</div></footer>
+
+<div id="modal" class="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><h2>Задать свой вопрос</h2><input id="qName" placeholder="Ваше имя"><input id="qEmail" placeholder="Email"><textarea id="qText" placeholder="Ваш вопрос"></textarea><button onclick="sendQuestion()">Отправить вопрос</button></div></div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body></html>
